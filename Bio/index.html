@@ -1,113 +1,427 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dr. Saif Nalband PhD</title>
+		<title>Dr. Saif Nalband PhD - Bio</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			body {
+				background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.blurb {
+				background: white;
+				padding: 40px;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+			}
+			
+			h2 {
+				font-family: "Arial MT", sans-serif;
+				color: #2c3e50;
+				font-size: 32px;
+				margin-bottom: 30px;
+				padding-bottom: 15px;
+				border-bottom: 3px solid #3498db;
+				position: relative;
+			}
+			
+			h2::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 80px;
+				height: 3px;
+				background: #e74c3c;
+			}
+			
+			/* Education Section Styling */
+			.education-table {
+				width: 100%;
+				margin-bottom: 50px;
+				border-collapse: separate;
+				border-spacing: 0;
+			}
+			
+			.education-table tbody tr {
+				background: #ffffff;
+				border: 1px solid #e8e8e8;
+				transition: all 0.3s ease;
+			}
+			
+			.education-table tbody tr:hover {
+				transform: translateX(5px);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				border-left: 4px solid #3498db;
+			}
+			
+			.education-table td {
+				padding: 25px;
+				vertical-align: middle;
+			}
+			
+			.education-table img {
+				width: 100px;
+				height: 100px;
+				object-fit: contain;
+				border-radius: 8px;
+				padding: 10px;
+				background: #f8f9fa;
+				transition: transform 0.3s ease;
+			}
+			
+			.education-table tr:hover img {
+				transform: scale(1.1);
+			}
+			
+			.education-table ul {
+				list-style-type: none;
+				padding-left: 0;
+				margin: 0;
+			}
+			
+			.education-table li {
+				line-height: 1.8;
+				color: #555;
+			}
+			
+			.education-table strong {
+				font-size: 18px;
+				color: #2c3e50;
+				display: block;
+				margin-bottom: 8px;
+			}
+			
+			.education-table u {
+				text-decoration: none;
+				color: #7f8c8d;
+				font-style: italic;
+			}
+			
+			.education-table a {
+				color: #3498db;
+				text-decoration: none;
+				font-weight: 500;
+				transition: color 0.3s ease;
+			}
+			
+			.education-table a:hover {
+				color: #e74c3c;
+				text-decoration: underline;
+			}
+			
+			/* Work Experience Table Styling */
+			.work-table {
+				width: 100%;
+				border-collapse: separate;
+				border-spacing: 0;
+				margin: 20px 0;
+				font-family: "Arial MT", sans-serif;
+				font-size: 14px;
+			}
+			
+			.work-table thead {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+			}
+			
+			.work-table th {
+				padding: 18px 15px;
+				text-align: left;
+				font-weight: 600;
+				font-size: 15px;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+			
+			.work-table th:first-child {
+				border-radius: 10px 0 0 0;
+			}
+			
+			.work-table th:last-child {
+				border-radius: 0 10px 0 0;
+			}
+			
+			.work-table tbody tr {
+				background: #ffffff;
+				border-bottom: 1px solid #e8e8e8;
+				transition: all 0.3s ease;
+			}
+			
+			.work-table tbody tr:hover {
+				background: #f8f9fa;
+				transform: scale(1.01);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+			}
+			
+			.work-table td {
+				padding: 20px 15px;
+				vertical-align: top;
+				border-right: 1px solid #f0f0f0;
+			}
+			
+			.work-table td:last-child {
+				border-right: none;
+			}
+			
+			.institution {
+				font-weight: bold;
+				color: #2c3e50;
+				font-size: 16px;
+				display: block;
+				margin-bottom: 5px;
+			}
+			
+			.duration {
+				display: inline-block;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 0.3px;
+			}
+			
+			.position {
+				font-style: italic;
+				color: #3498db;
+				margin-bottom: 12px;
+				font-size: 15px;
+				font-weight: 600;
+			}
+			
+			.work-table ul {
+				margin: 8px 0;
+				padding-left: 20px;
+			}
+			
+			.work-table li {
+				margin: 8px 0;
+				line-height: 1.7;
+				color: #555;
+				position: relative;
+			}
+			
+			.work-table li::marker {
+				color: #3498db;
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.blurb {
+					padding: 20px;
+				}
+				
+				h2 {
+					font-size: 24px;
+				}
+				
+				.education-table img {
+					width: 80px;
+					height: 80px;
+				}
+				
+				.work-table {
+					font-size: 13px;
+				}
+				
+				.work-table th,
+				.work-table td {
+					padding: 12px 8px;
+				}
+			}
+			
+			/* Section Divider */
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(to right, transparent, #3498db, transparent);
+				margin: 50px 0;
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
     		<ul>
-				<li><a href="/">Home</a></li>
+        		<li><a href="/">Home</a></li>
         		<li><a href="/Bio">Bio</a></li>
-				    <li><a href="/courses">Courses</a></li>
-				    <li><a href="/research">Research</a></li>
-            		<li><a href="/Publication">Publication</a></li>
-				    <li><a href="/about">About</a></li>
-        			<li><a href="/blog">Blog</a></li>
-				    <li><a href="/cv/SaifNalband2023.pdf" target="_blank">CV</a>
+				<li><a href="/courses">Courses</a></li>
+				<li><a href="/research">Research</a></li>
+                <li><a href="/Publication">Publication</a></li>
+				<li><a href="/about">About</a></li>
+        		<li><a href="/blog">Blog</a></li>
+				<li><a href="/cv/SaifNalband2023.pdf" target="_blank">CV</a></li>
     		</ul>
 		</nav>
 		<div class="container">
     		<div class="blurb">
-				<h4>Education</h4>
-				<table style="width: 100%;">
-    <tbody>
-        <tr>
-            <td style="width: 15.4119%;"><img src="/images/BITS.png"style="width: 120px;"></td>
-            <td style="width: 84.4715%;">
-                <ul>
-                    <li>Ph.D. in Biomedical Signal Processing &amp; Machine Learning<br>Thesis title: <u>Analysis &amp; Classification of Vibroarthographic Signal using Nonstationary Signal Processing Techniques</u><br>Advisor: <a href="https://universe.bits-pilani.ac.in/goa/amalinprince/profile" target="_blank">Dr. Amalin Prince</a></li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 15.4119%;"><img src="/images/RV.png"style="width: 120px;"></td>
-            <td style="width: 84.4715%;">
-                <ul>
-                    <li>M.Tech. in Biomedical Signal Processing, RV College of Engineering, 2011<br>Thesis title: <u>Statistical Analysis of GAIT Signals.</u><br>Advisor: <a href="http://aero.iisc.ac.in/people/s-n-omkar/" target="_blank">DR. S.N.Omkar</a></li>
-                </ul><br>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 15.4119%;"><img src="/images/MU.jpg"style="width: 120px;"> </td>
-            <td style="width: 84.4715%;">
-                <ul>
-                    <li>B.Tech in Computer Engineering, University of Mumbai, India, 2008<br>Thesis title: <u>Motion detection using MATLAB</u></li>
-                </ul><br>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-                  
-				  <h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:.25pt;text-indent:-.5pt;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'><strong><span style="font-size: 18px;">WORK EXPERIENCE</span></strong></h1>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:0in;text-align:left;text-indent:0in;line-height:110%;font-size:15px;font-family:"Cambria",serif;color:black;'><strong>Thapar Institute of Engineering and Technology, Patiala &nbsp; &nbsp; &nbsp; &nbsp;</strong>October 2022 &ndash; present &nbsp;</p>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Assistant Professor<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Instructor in-charge (IC) OOPS, C programing</li>
-    <li>research in the field of machine learning, Blockchain</li>
-</ul>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:0in;text-align:left;text-indent:0in;line-height:110%;font-size:15px;font-family:"Cambria",serif;color:black;'><strong>IIIT-Pune &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>January 2022 &ndash; October 2022 &nbsp;</p>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Assistant Professor<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Instructor in-charge (IC) of Analysis and Design of Algorithm, Blockchain</li>
-    <li>research in the field of machine learning, Blockchain</li>
-</ul>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:-.25pt;text-indent:0in;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'>DY Patil International University - Pune &nbsp; &nbsp;<span style="font-weight:normal;">July 2020 &ndash; December 2021 &nbsp;</span></h1>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'><br></h2>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Assistant Professor<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Instructor in-charge (IC) of Design &amp; Analysis of Algorithm,DBMS, OOPS using JAVA. </li>
-    <li>Research in the field of applied machine learning in the domain of biomedical engineering.</li>
-    <li>Designing Subjects for specialized tracks and Syllabus of the course. &nbsp;</li>
-    <li>Moodle/Collpol Administrator of University.</li>
-    <li>Supervising UG, PG, and PhD students.</li>
-</ul>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:.25pt;text-indent:-.5pt;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'>INFANT Research Centre, UCC, Cork, Ireland &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight:normal;">January 2019&ndash; December 2019 &nbsp;</span></h1>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:.25pt;text-indent:-.5pt;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'><span style="font-weight:normal;"><em>Post Doctoral Researcher</em>&nbsp;</span></h1>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:1.0pt;text-align:justify;text-indent:-.5pt;line-height:110%;font-size:15px;font-family:"Cambria",serif;color:black;'>I was working on DELPHI project at INFANT research centre to develop an automated seizure detection algorithm using machine learning algorithms. I observe, identify and interpret patterns in ECG signals and extract features. I utilize feature section and supervised algorithms for classification. The work is carried out in MATLAB and classification is carried out in python using various libraries. &nbsp;</p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:0in;text-align:left;text-indent:0in;line-height:110%;font-size:15px;font-family:"Cambria",serif;color:black;'><strong>IIIT-Pune &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong>July 2018 &ndash; December 2018 &nbsp;</p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-align:left;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;'><em>Assistant Professor</em></p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:0in;text-align:left;text-indent:0in;line-height:110%;font-size:15px;font-family:"Cambria",serif;color:black;'><span style='font-family:"Calibri",sans-serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-family:"Segoe UI Symbol",sans-serif;'>&bull;</span><span style='font-family:"Arial",sans-serif;'>&nbsp;&nbsp; &nbsp;</span>Instructor in-charge (IC) of Analysis and Design of Algorithm.</p>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:-.25pt;text-indent:0in;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'>BITS Pilani, Goa Campus, India &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight:normal;">August 2013 - May 2018</span></h1>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Teaching Assistant (Instructor)<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Digital Design &amp; Electronics and instrumentation &amp; Microprocessor and Interfacing </li>
-    <li>Contacted lab experiments and tutorials for undergraduate students in MOOC course.</li>
-    <li>Assisted the instructor in charge for contacting lab examination.</li>
-</ul>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:-.25pt;text-indent:0in;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'>HCL Infosystem, Mumbai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight:normal;">August 2012 - May 2013</span></h1>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Retainership<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Quality Support of the Application.</li>
-    <li>Timely Enhancement and development of software with quality.</li>
-</ul>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:.2pt;margin-left:-.25pt;text-indent:0in;line-height:108%;font-size:15px;font-family:"Cambria",serif;color:black;'>Indian Institute of Science, Bangalore &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight:normal;">July 2011 - June 2011</span></h1>
-<h2 style='margin-top:0in;margin-right:0in;margin-bottom:6.95pt;margin-left:.25pt;text-indent:-.5pt;line-height:107%;font-size:15px;font-family:"Cambria",serif;color:black;font-weight:normal;font-style:italic;'>Project Intern<span style="font-style:normal;">&nbsp;</span></h2>
-<ul style="list-style-type: undefined;margin-left:32.95px;">
-    <li>Conducting my own research independently &nbsp;</li>
-    <li>Assist anting supervisor in conducting different experiments</li>
-</ul>
-                      <div class="col-md-1 col-sm-12" style="background-color:transparent">
-                        <p><img src="/images/BITS.png" width="80px" align="right" style="vertical-align:middle;margin:0px 0px 40px 0px" />
-                        <img src="/images/RV.png" width="80px" align="right" style="vertical-align:middle;margin:0px 0px 20px 0px" />
-                        <img src="/images/MU.jpg" width="80px" align="right" style="vertical-align:middle;margin:0px 0px 25px 0px" /></p>
-                      </div>
-                    
-    		</div><!-- /.blurb -->
+				<h2>Education</h2>
+				
+				<table class="education-table">
+					<tbody>
+						<tr>
+							<td style="width: 15%; text-align: center;">
+								<img src="/images/BITS.png" alt="BITS Pilani">
+							</td>
+							<td style="width: 85%;">
+								<ul>
+									<li>
+										<strong>Ph.D. in Biomedical Signal Processing & Machine Learning</strong>
+										BITS Pilani, Goa Campus, 2018<br>
+										Thesis title: <u>Analysis & Classification of Vibroarthographic Signal using Nonstationary Signal Processing Techniques</u><br>
+										Advisor: <a href="https://universe.bits-pilani.ac.in/goa/amalinprince/profile" target="_blank">Dr. Amalin Prince</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<img src="/images/RV.png" alt="RV College">
+							</td>
+							<td>
+								<ul>
+									<li>
+										<strong>M.Tech. in Biomedical Signal Processing</strong>
+										RV College of Engineering, 2011<br>
+										Thesis title: <u>Statistical Analysis of GAIT Signals</u><br>
+										Advisor: <a href="http://aero.iisc.ac.in/people/s-n-omkar/" target="_blank">Dr. S.N. Omkar</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<img src="/images/MU.jpg" alt="Mumbai University">
+							</td>
+							<td>
+								<ul>
+									<li>
+										<strong>B.Tech in Computer Engineering</strong>
+										University of Mumbai, India, 2008<br>
+										Thesis title: <u>Motion detection using MATLAB</u>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="section-divider"></div>
+				
+				<h2>Work Experience</h2>
+				
+				<table class="work-table">
+					<thead>
+						<tr>
+							<th style="width: 30%;">Institution</th>
+							<th style="width: 20%;">Duration</th>
+							<th style="width: 50%;">Position & Responsibilities</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="institution">Thapar Institute of Engineering and Technology, Patiala</span></td>
+							<td><span class="duration">Oct 2022 – Present</span></td>
+							<td>
+								<div class="position">Assistant Professor</div>
+								<ul>
+									<li>Instructor in charge (IC) OOPS, C programming, Parallel and Distributing computing</li>
+									<li>Research in the field of medical diagnosis using machine learning, Blockchain</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">IIIT-Pune</span></td>
+							<td><span class="duration">Jan 2022 – Oct 2022</span></td>
+							<td>
+								<div class="position">Assistant Professor</div>
+								<ul>
+									<li>Instructor in charge (IC) of Analysis and Design of Algorithm, Blockchain</li>
+									<li>Research in the field of machine learning, Blockchain</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">DY Patil International University, Pune</span></td>
+							<td><span class="duration">Jul 2020 – Dec 2021</span></td>
+							<td>
+								<div class="position">Assistant Professor</div>
+								<ul>
+									<li>Instructor in-charge (IC) of Design & Analysis of Algorithm, DBMS, OOPS using JAVA</li>
+									<li>Research in the field of applied machine learning in the domain of biomedical engineering</li>
+									<li>Designing Subjects for specialized tracks and Syllabus of the course</li>
+									<li>Moodle/Collpol Administrator of University</li>
+									<li>Supervising UG, PG and PhD students</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">INFANT Research Centre, UCC, Cork, Ireland</span></td>
+							<td><span class="duration">Jan 2019 – Dec 2019</span></td>
+							<td>
+								<div class="position">Post Doctoral Researcher</div>
+								<ul>
+									<li>Working on DELPHI project at INFANT research centre to develop an automated seizure detection algorithm using machine learning algorithms</li>
+									<li>Observe, identify and interpret patterns in ECG signals and extract features</li>
+									<li>Utilize feature section and supervised algorithms for classification</li>
+									<li>Work carried out in MATLAB and classification carried out in Python using various libraries</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">IIIT-Pune</span></td>
+							<td><span class="duration">Jul 2018 – Dec 2018</span></td>
+							<td>
+								<div class="position">Assistant Professor</div>
+								<ul>
+									<li>Instructor in-charge (IC) of Analysis and Design of Algorithm</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">BITS Pilani, Goa Campus, India</span></td>
+							<td><span class="duration">Aug 2013 – May 2018</span></td>
+							<td>
+								<div class="position">Teaching Assistant (Instructor)</div>
+								<ul>
+									<li>Digital Design & Electronics and Instrumentation & Microprocessor and Interfacing</li>
+									<li>Conducted lab experiments and tutorials for undergraduate students in MOOC course</li>
+									<li>Assisted the instructor in charge for conducting lab examination</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">HCL Infosystem, Mumbai</span></td>
+							<td><span class="duration">Aug 2012 – May 2013</span></td>
+							<td>
+								<div class="position">Retainership</div>
+								<ul>
+									<li>Quality Support of the Application</li>
+									<li>Timely Enhancement and development of software with quality</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="institution">Indian Institute of Science, Bangalore</span></td>
+							<td><span class="duration">Jul 2011 – Jun 2012</span></td>
+							<td>
+								<div class="position">Project Intern</div>
+								<ul>
+									<li>Conducting own research independently</li>
+									<li>Assisting supervisor in conducting different experiments</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
     		<ul>
