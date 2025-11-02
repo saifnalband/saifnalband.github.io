@@ -1,9 +1,216 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dr. Saif Nalband PhD</title>
+		<title>Dr. Saif Nalband PhD - Publications</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			body {
+				background: linear-gradient(to bottom, #f0f4ff 0%, #ffffff 100%);
+				font-family: "Arial MT", sans-serif;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.blurb {
+				background: white;
+				padding: 50px;
+				border-radius: 12px;
+				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
+			}
+			
+			h2 {
+				font-family: "Arial MT", sans-serif;
+				color: #4f46e5;
+				font-size: 32px;
+				margin: 40px 0 30px 0;
+				padding-bottom: 15px;
+				border-bottom: 3px solid #4f46e5;
+				position: relative;
+			}
+			
+			h2:first-child {
+				margin-top: 0;
+			}
+			
+			h2::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100px;
+				height: 3px;
+				background: #6366f1;
+			}
+			
+			/* Publication List Styling */
+			ol {
+				counter-reset: publication-counter;
+				list-style: none;
+				padding: 0;
+			}
+			
+			ol li {
+				counter-increment: publication-counter;
+				position: relative;
+				padding: 20px 25px 20px 70px;
+				margin: 15px 0;
+				background: #ffffff;
+				border-left: 4px solid #6366f1;
+				border-radius: 8px;
+				box-shadow: 0 2px 4px rgba(99, 102, 241, 0.08);
+				transition: all 0.3s ease;
+				line-height: 1.8;
+				font-size: 15px;
+			}
+			
+			ol li:hover {
+				transform: translateX(8px);
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+				border-left-color: #4f46e5;
+			}
+			
+			ol li::before {
+				content: counter(publication-counter);
+				position: absolute;
+				left: 15px;
+				top: 20px;
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+				color: white;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				font-size: 16px;
+				box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+			}
+			
+			/* Author Names */
+			ol li span[style*="Arial MT"] {
+				color: #1e293b;
+			}
+			
+			ol li strong {
+				color: #4f46e5;
+				font-weight: 700;
+			}
+			
+			/* Paper Title in Quotes */
+			ol li::after {
+				content: none;
+			}
+			
+			.paper-title {
+				color: #1e293b;
+				font-weight: 600;
+				font-style: italic;
+			}
+			
+			/* Journal/Conference Info */
+			.publication-info {
+				color: #64748b;
+				font-size: 14px;
+			}
+			
+			/* DOI Links */
+			ol li a,
+			.doi-link {
+				color: #6366f1;
+				text-decoration: none;
+				font-weight: 500;
+				transition: all 0.3s ease;
+				border-bottom: 1px dotted #6366f1;
+			}
+			
+			ol li a:hover,
+			.doi-link:hover {
+				color: #4f46e5;
+				border-bottom: 1px solid #4f46e5;
+			}
+			
+			/* Section Divider */
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(to right, transparent, #6366f1, transparent);
+				margin: 50px 0 30px 0;
+			}
+			
+			/* Stats Badge */
+			.stats-container {
+				display: flex;
+				gap: 20px;
+				margin-bottom: 30px;
+				flex-wrap: wrap;
+			}
+			
+			.stat-badge {
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+				color: white;
+				padding: 15px 25px;
+				border-radius: 30px;
+				font-weight: 600;
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			
+			.stat-badge .number {
+				font-size: 24px;
+				font-weight: 700;
+			}
+			
+			.stat-badge .label {
+				font-size: 14px;
+				opacity: 0.95;
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.blurb {
+					padding: 25px;
+				}
+				
+				h2 {
+					font-size: 24px;
+				}
+				
+				ol li {
+					padding: 15px 15px 15px 60px;
+					font-size: 14px;
+				}
+				
+				ol li::before {
+					width: 35px;
+					height: 35px;
+					font-size: 14px;
+					left: 10px;
+				}
+				
+				.stats-container {
+					flex-direction: column;
+				}
+			}
+			
+			/* Year Badge */
+			.year-badge {
+				display: inline-block;
+				background: #e0e7ff;
+				color: #4f46e5;
+				padding: 3px 10px;
+				border-radius: 12px;
+				font-size: 12px;
+				font-weight: 600;
+				margin-left: 8px;
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
@@ -20,36 +227,72 @@
 		</nav>
 		<div class="container">
     		<div class="blurb">
-				<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:justify;'><strong><span style='font-family:"Arial MT",sans-serif;'>Publication: Journal</span></strong></p>
+				<div class="stats-container">
+					<div class="stat-badge">
+						<div class="number">8</div>
+						<div class="label">Journal Articles</div>
+					</div>
+					<div class="stat-badge">
+						<div class="number">9</div>
+						<div class="label">Conference Papers</div>
+					</div>
+					<div class="stat-badge">
+						<div class="number">2</div>
+						<div class="label">Patents</div>
+					</div>
+				</div>
+
+				<h2>Journal Publications</h2>
 <ol>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>Saif Nalband</strong>, Pallavi Kiratkar, Maulik Gupta, Mansi Gambhir, Surabhi Sonam, Femi Robert, A. Amalin Prince,</span> "<span style='font-family:"Arial MT",sans-serif;'>Ensemble Techniques for Predictive Modeling of Leishmanial Activity via Molecular Fingerprints</span>", <span style='font-family:"Arial MT",sans-serif;'>BMC Medical Informatics and Decision Making, Vol: 25(1), Pages: 378, 2025, doi: 10.1186/s12911-025-02870-2</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Patil, A., Mehto, A. & <strong>Nalband, S.</strong></span> "<span style='font-family:"Arial MT",sans-serif;'>Enhancing skin lesion diagnosis with data augmentation techniques: a review of the state-of-the-art</span>", <span style='font-family:"Arial MT",sans-serif;'>Multimedia Tools and Applications, Vol: 84(22), Pages: 25325-25364, 2025, doi: 10.1007/s11042-024-20145-7</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Mittal, R., A. Amalin Prince, <strong>Saif Nalband</strong>, Femi Robert, and Agastinose Ronickom Jac Fredo,</span> "<span style='font-family:"Arial MT",sans-serif;'>Modified-MaMeMi filter bank for efficient extraction of brainwaves from electroencephalograms</span>", <span style='font-family:"Arial MT",sans-serif;'>Biomedical Signal Processing and Control, Vol: 69, Pages: 102927, 2021, doi: 10.1016/j.bspc.2021.102927</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Mittal, R., A. Amalin Prince, <strong>Saif Nalband</strong>, Femi Robert, and Agastinose Ronickom Jac Fredo,</span> "<span style='font-family:"Arial MT",sans-serif;'>Low-power hardware accelerator for detrending measured biopotential data</span>", <span style='font-family:"Arial MT",sans-serif;'>IEEE Transactions on Instrumentation and Measurement, Vol: 70, Pages: 1-9, 2020, doi: 10.1109/TIM.2020.3011334</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>Saif Nalband</strong>, CA Valliappan, A. Amalin Prince, Anita Agrawal,</span> "<span style='font-family:"Arial MT",sans-serif;'>Time-frequency based feature extraction for the analysis of vibroarthographic signals</span>", <span style='font-family:"Arial MT",sans-serif;'>Computers & Electrical Engineering, Vol: 69, Pages: 720-731, 2018, doi: 10.1016/j.compeleceng.2018.02.046</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>Saif Nalband</strong>, Amalin Prince, Anita Agrawal,</span> "<span style='font-family:"Arial MT",sans-serif;'>Entropy-based feature extraction and classification of vibroarthographic signal using complete ensemble empirical mode decomposition with adaptive noise</span>", <span style='font-family:"Arial MT",sans-serif;'>IET Science, Measurement & Technology, Vol: 12, Pages: 350-359, 2018, doi: 10.1049/iet-smt.2017.0284</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>Saif Nalband</strong>, Aditya Sundar, A. Amalin Prince, Anita Agrawal,</span> "<span style='font-family:"Arial MT",sans-serif;'>Feature selection and classification methodology for the detection of knee-joint disorders</span>", <span style='font-family:"Arial MT",sans-serif;'>Computer methods and programs in biomedicine, Vol: 127, Pages: 94-104, 2016, doi: 10.1016/j.cmpb.2016.01.020</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>Saif Nalband</strong>, RR Sreekrishna, A. Amalin Prince,</span> "<span style='font-family:"Arial MT",sans-serif;'>Analysis of knee joint vibration signals using ensemble empirical mode decomposition</span>", <span style='font-family:"Arial MT",sans-serif;'>Procedia Computer Science, Vol: 89, Pages: 820-827, 2016, doi: 10.1016/j.procs.2016.06.067</span></li>
+    <li><strong>Saif Nalband</strong>, Pallavi Kiratkar, Maulik Gupta, Mansi Gambhir, Surabhi Sonam, Femi Robert, A. Amalin Prince, "Ensemble Techniques for Predictive Modeling of Leishmanial Activity via Molecular Fingerprints", <em>BMC Medical Informatics and Decision Making</em>, Vol: 25(1), Pages: 378 <span class="year-badge">2025</span><br><span class="doi-link">doi: 10.1186/s12911-025-02870-2</span></li>
+    
+    <li>Patil, A., Mehto, A. & <strong>Nalband, S.</strong> "Enhancing skin lesion diagnosis with data augmentation techniques: a review of the state-of-the-art", <em>Multimedia Tools and Applications</em>, Vol: 84(22), Pages: 25325-25364 <span class="year-badge">2025</span><br><span class="doi-link">doi: 10.1007/s11042-024-20145-7</span></li>
+    
+    <li>Mittal, R., A. Amalin Prince, <strong>Saif Nalband</strong>, Femi Robert, and Agastinose Ronickom Jac Fredo, "Modified-MaMeMi filter bank for efficient extraction of brainwaves from electroencephalograms", <em>Biomedical Signal Processing and Control</em>, Vol: 69, Pages: 102927 <span class="year-badge">2021</span><br><span class="doi-link">doi: 10.1016/j.bspc.2021.102927</span></li>
+    
+    <li>Mittal, R., A. Amalin Prince, <strong>Saif Nalband</strong>, Femi Robert, and Agastinose Ronickom Jac Fredo, "Low-power hardware accelerator for detrending measured biopotential data", <em>IEEE Transactions on Instrumentation and Measurement</em>, Vol: 70, Pages: 1-9 <span class="year-badge">2020</span><br><span class="doi-link">doi: 10.1109/TIM.2020.3011334</span></li>
+    
+    <li><strong>Saif Nalband</strong>, CA Valliappan, A. Amalin Prince, Anita Agrawal, "Time-frequency based feature extraction for the analysis of vibroarthographic signals", <em>Computers & Electrical Engineering</em>, Vol: 69, Pages: 720-731 <span class="year-badge">2018</span><br><span class="doi-link">doi: 10.1016/j.compeleceng.2018.02.046</span></li>
+    
+    <li><strong>Saif Nalband</strong>, Amalin Prince, Anita Agrawal, "Entropy-based feature extraction and classification of vibroarthographic signal using complete ensemble empirical mode decomposition with adaptive noise", <em>IET Science, Measurement & Technology</em>, Vol: 12, Pages: 350-359 <span class="year-badge">2018</span><br><span class="doi-link">doi: 10.1049/iet-smt.2017.0284</span></li>
+    
+    <li><strong>Saif Nalband</strong>, Aditya Sundar, A. Amalin Prince, Anita Agrawal, "Feature selection and classification methodology for the detection of knee-joint disorders", <em>Computer methods and programs in biomedicine</em>, Vol: 127, Pages: 94-104 <span class="year-badge">2016</span><br><span class="doi-link">doi: 10.1016/j.cmpb.2016.01.020</span></li>
+    
+    <li><strong>Saif Nalband</strong>, RR Sreekrishna, A. Amalin Prince, "Analysis of knee joint vibration signals using ensemble empirical mode decomposition", <em>Procedia Computer Science</em>, Vol: 89, Pages: 820-827 <span class="year-badge">2016</span><br><span class="doi-link">doi: 10.1016/j.procs.2016.06.067</span></li>
 </ol>
-<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:justify;'><span style='font-family:"Arial MT",sans-serif;'>&nbsp;</span></p>
-<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:justify;'><strong><span style='font-family:"Arial MT",sans-serif;'>Publication: Conferences</span></strong></p>
+
+<div class="section-divider"></div>
+
+<h2>Conference Publications</h2>
 <ol>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Maulik Gupta, Anirudh and <strong>Saif Nalband</strong>,</span> "<span style='font-family:"Arial MT",sans-serif;'>Data-Driven Visual Chart Predictions with Machine Learning</span>", <span style='font-family:"Arial MT",sans-serif;'>2nd The International Symposium on Artificial Intelligence (ISAI), 2025</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Navpreet, Roul, R.K. and <strong>Nalband, S.</strong>,</span> "<span style='font-family:"Arial MT",sans-serif;'>An Ensembled Parking Space Classifier Across Diverse Weather Conditions</span>", <span style='font-family:"Arial MT",sans-serif;'>International Conference on Distributed Computing and Intelligent Technology, pp. 240-256, Springer Nature Switzerland, 2024</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Roul, R.K. and <strong>S. Nalband</strong>,</span> "<span style='font-family:"Arial MT",sans-serif;'>Multi-document Summarization by Ensembling of Scoring and Topic Modeling Techniques</span>", <span style='font-family:"Arial MT",sans-serif;'>Proceedings of the 21st International Conference on Natural Language Processing (ICON), pp. 588-592, 2024</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Rajendra Kumar Roul, Navpreet and <strong>Saif Nalband</strong>,</span> "<span style='font-family:"Arial MT",sans-serif;'>Unified Scoring and Topic Modeling: A Combined Approach for Superior Multi document Summarization</span>", <span style='font-family:"Arial MT",sans-serif;'>17th SoCTA (Soft Computing: Theories and Applications), 2024</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>Rajendra Kumar Roul, Navpreet and <strong>Saif Nalband</strong>,</span> "<span style='font-family:"Arial MT",sans-serif;'>Innovating Multi-Document Summarization through Strategic Fusion</span>", <span style='font-family:"Arial MT",sans-serif;'>International Conference on Signal and Data Processing [ICSDP], 2024</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>E. Mascarenhas, <strong>S. Nalband</strong>, A. R. J. Fredo and A. A. Prince,</span> "<span style='font-family:"Arial MT",sans-serif;'>Analysis and Classification of Vibroarthrographic Signals using Tuneable 'Q' Wavelet Transform</span>", <span style='font-family:"Arial MT",sans-serif;'>7th International Conference on Signal Processing and Integrated Networks (SPIN), 2020, pp. 65-70, doi: 10.1109/SPIN48934.2020.9071335</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>S. A. Raurale, <strong>S. Nalband</strong>, G. B. Boylan, G. Lightbody and J. M. O'Toole,</span> "<span style='font-family:"Arial MT",sans-serif;'>Suitability of an inter-burst detection method for grading hypoxic-ischemic encephalopathy in newborn EEG</span>", <span style='font-family:"Arial MT",sans-serif;'>41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 2019, pp. 4125-4128, doi: 10.1109/EMBC.2019.8857000</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'><strong>S. Nalband</strong>, C. A. Valliappan, R. G. A. A. Prince and A. Agrawal,</span> "<span style='font-family:"Arial MT",sans-serif;'>Feature extraction and classification of knee joint disorders using Hilbert Huang transform</span>", <span style='font-family:"Arial MT",sans-serif;'>14th International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON), 2017, pp. 266-269, doi: 10.1109/ECTICon.2017.8096224</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>R. R. Sreekrishna, <strong>S. Nalband</strong> and A. A. Prince,</span> "<span style='font-family:"Arial MT",sans-serif;'>Real time cascaded moving average filter for detrending of electroencephalogram signals</span>", <span style='font-family:"Arial MT",sans-serif;'>2016 International Conference on Communication and Signal Processing (ICCSP), 2016, pp. 0745-0750, doi: 10.1109/ICCSP.2016.7754244</span></li>
+    <li>Maulik Gupta, Anirudh and <strong>Saif Nalband</strong>, "Data-Driven Visual Chart Predictions with Machine Learning", <em>2nd The International Symposium on Artificial Intelligence (ISAI)</em> <span class="year-badge">2025</span></li>
+    
+    <li>Navpreet, Roul, R.K. and <strong>Nalband, S.</strong>, "An Ensembled Parking Space Classifier Across Diverse Weather Conditions", <em>International Conference on Distributed Computing and Intelligent Technology</em>, pp. 240-256, Springer Nature Switzerland <span class="year-badge">2024</span></li>
+    
+    <li>Roul, R.K. and <strong>S. Nalband</strong>, "Multi-document Summarization by Ensembling of Scoring and Topic Modeling Techniques", <em>Proceedings of the 21st International Conference on Natural Language Processing (ICON)</em>, pp. 588-592 <span class="year-badge">2024</span></li>
+    
+    <li>Rajendra Kumar Roul, Navpreet and <strong>Saif Nalband</strong>, "Unified Scoring and Topic Modeling: A Combined Approach for Superior Multi document Summarization", <em>17th SoCTA (Soft Computing: Theories and Applications)</em> <span class="year-badge">2024</span></li>
+    
+    <li>Rajendra Kumar Roul, Navpreet and <strong>Saif Nalband</strong>, "Innovating Multi-Document Summarization through Strategic Fusion", <em>International Conference on Signal and Data Processing [ICSDP]</em> <span class="year-badge">2024</span></li>
+    
+    <li>E. Mascarenhas, <strong>S. Nalband</strong>, A. R. J. Fredo and A. A. Prince, "Analysis and Classification of Vibroarthrographic Signals using Tuneable 'Q' Wavelet Transform", <em>7th International Conference on Signal Processing and Integrated Networks (SPIN)</em>, pp. 65-70 <span class="year-badge">2020</span><br><span class="doi-link">doi: 10.1109/SPIN48934.2020.9071335</span></li>
+    
+    <li>S. A. Raurale, <strong>S. Nalband</strong>, G. B. Boylan, G. Lightbody and J. M. O'Toole, "Suitability of an inter-burst detection method for grading hypoxic-ischemic encephalopathy in newborn EEG", <em>41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em>, pp. 4125-4128 <span class="year-badge">2019</span><br><span class="doi-link">doi: 10.1109/EMBC.2019.8857000</span></li>
+    
+    <li><strong>S. Nalband</strong>, C. A. Valliappan, R. G. A. A. Prince and A. Agrawal, "Feature extraction and classification of knee joint disorders using Hilbert Huang transform", <em>14th International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON)</em>, pp. 266-269 <span class="year-badge">2017</span><br><span class="doi-link">doi: 10.1109/ECTICon.2017.8096224</span></li>
+    
+    <li>R. R. Sreekrishna, <strong>S. Nalband</strong> and A. A. Prince, "Real time cascaded moving average filter for detrending of electroencephalogram signals", <em>2016 International Conference on Communication and Signal Processing (ICCSP)</em>, pp. 0745-0750 <span class="year-badge">2016</span><br><span class="doi-link">doi: 10.1109/ICCSP.2016.7754244</span></li>
 </ol>
-<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:justify;'><span style='font-family:"Arial MT",sans-serif;'>&nbsp;</span></p>
-<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:justify;'><strong><span style='font-family:"Arial MT",sans-serif;'>Patent</span></strong></p>
+
+<div class="section-divider"></div>
+
+<h2>Patents</h2>
 <ol>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>VEHICLE TO VEHICLE COMMUNICATION SYSTEM FOR ROAD SAFETY, Published July 2024</span></li>
-    <li style='margin-right: 0in; margin-bottom: 0in; font-size: 16px; font-family: "Times New Roman", serif; margin-top: 5.75pt; text-align: justify;'><span style='font-family:"Arial MT",sans-serif;'>PAPERLESS NOTARIZATION AND VERIFICATION PLATFORM USING BLOCKCHAIN TECHNOLOGY, Published April 2024</span></li>
+    <li><strong>VEHICLE TO VEHICLE COMMUNICATION SYSTEM FOR ROAD SAFETY</strong> <span class="year-badge">July 2025</span></li>
+    
+    <li><strong>PAPERLESS NOTARIZATION AND VERIFICATION PLATFORM USING BLOCKCHAIN TECHNOLOGY</strong> <span class="year-badge">April 2025</span></li>
 </ol>
+
 			</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
