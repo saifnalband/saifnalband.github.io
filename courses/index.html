@@ -1,9 +1,134 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dr. Saif Nalband PhD</title>
+		<title>Dr. Saif Nalband PhD - Courses</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			body {
+				background: linear-gradient(to bottom, #f0f4ff 0%, #ffffff 100%);
+				font-family: "Arial MT", sans-serif;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.blurb {
+				background: white;
+				padding: 50px;
+				border-radius: 12px;
+				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
+			}
+			
+			h2 {
+				font-family: "Arial MT", sans-serif;
+				color: #4f46e5;
+				font-size: 32px;
+				margin-bottom: 30px;
+				padding-bottom: 15px;
+				border-bottom: 3px solid #4f46e5;
+				position: relative;
+			}
+			
+			h2::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100px;
+				height: 3px;
+				background: #6366f1;
+			}
+			
+			/* Course Table Styling */
+			.course-table {
+				width: 100%;
+				border-collapse: separate;
+				border-spacing: 0;
+				margin: 30px 0;
+				font-size: 15px;
+				box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			
+			.course-table thead {
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+				color: white;
+			}
+			
+			.course-table th {
+				padding: 18px 15px;
+				text-align: center;
+				font-weight: 600;
+				font-size: 15px;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+			
+			.course-table tbody tr {
+				background: #ffffff;
+				border-bottom: 1px solid #e0e7ff;
+				transition: all 0.3s ease;
+			}
+			
+			.course-table tbody tr:hover {
+				background: #f0f4ff;
+				transform: scale(1.01);
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+			}
+			
+			.course-table td {
+				padding: 18px 15px;
+				text-align: center;
+				vertical-align: middle;
+				color: #1e293b;
+				border-right: 1px solid #f0f0f0;
+			}
+			
+			.course-table td:last-child {
+				border-right: none;
+			}
+			
+			.course-table tbody tr:last-child td {
+				border-bottom: none;
+			}
+			
+			/* Institution Cell Styling */
+			.course-table td[rowspan] {
+				background: #f0f4ff;
+				font-weight: 600;
+				color: #4f46e5;
+				vertical-align: middle;
+			}
+			
+			/* Empty row styling */
+			.course-table tr:has(td:empty) {
+				background: #fafafa;
+			}
+			
+			@media (max-width: 768px) {
+				.blurb {
+					padding: 25px;
+				}
+				
+				h2 {
+					font-size: 24px;
+				}
+				
+				.course-table {
+					font-size: 13px;
+				}
+				
+				.course-table th,
+				.course-table td {
+					padding: 12px 8px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
@@ -15,142 +140,72 @@
             	<li><a href="/Publication">Publication</a></li>
 				<li><a href="/about">About</a></li>
         		<li><a href="/blog">Blog</a></li>
-				<li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a>
+				<li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a></li>
     		</ul>
 		</nav>
 		<div class="container">
     		<div class="blurb">
-        		<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;'><strong>Course Taught:</strong></p>
-<div align="center" style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;'>
-    <table style="border-collapse:collapse;border:none;">
-        <tbody>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'><strong>Course Name</strong></p>
-                </td>
-                <td style="width:57.45pt;border:solid windowtext 1.0pt;border-left:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'><strong>Semester</strong></p>
-                </td>
-                <td style="width:90.6pt;border:solid windowtext 1.0pt;border-left:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'><strong>Academic Year</strong></p>
-                </td>
-                <td style="width:54.95pt;border:solid windowtext 1.0pt;border-left:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'><strong>Level</strong></p>
-                </td>
-                <td style="width:136.1pt;border:solid windowtext 1.0pt;border-left:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'><strong>Institute/University</strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Design and Analysis of Algorithm</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>III</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2020-21,</p>
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2021-22</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-                <td rowspan="3" style="width:136.1pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>DY Patil International University, Pune</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Object Oriented Programing Language using JAVA</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>III</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2021-22</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Database Management System</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>IV</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2020-21</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Analysis and Design of Algorithm</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>II</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2022-23,</p>
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2021-22, 2020-21, 2018-19</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-                <td rowspan="4" style="width:136.1pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Indian Institute Of Information Technology, Pune</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Blockchain and Its application</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>VI</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2022-23</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>Big Data Analytics</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>VII</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>2022-23</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>UG</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:111.7pt;border:solid windowtext 1.0pt;border-top:  none;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>&nbsp;</p>
-                </td>
-                <td style="width:57.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>&nbsp;</p>
-                </td>
-                <td style="width:90.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>&nbsp;</p>
-                </td>
-                <td style="width:54.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;">
-                    <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;text-align:center;'>&nbsp;</p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;margin-top:5.75pt;'><span style='font-family:"Arial MT",sans-serif;'>&nbsp;</span></p>
+        		<h2>Courses Taught</h2>
+				<table class="course-table">
+					<thead>
+						<tr>
+							<th>Course Name</th>
+							<th>Semester</th>
+							<th>Academic Year</th>
+							<th>Level</th>
+							<th>Institute/University</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Design and Analysis of Algorithm</td>
+							<td>III</td>
+							<td>2020-21, 2021-22</td>
+							<td>UG</td>
+							<td rowspan="3">DY Patil International University, Pune</td>
+						</tr>
+						<tr>
+							<td>Object Oriented Programming Language using JAVA</td>
+							<td>III</td>
+							<td>2021-22</td>
+							<td>UG</td>
+						</tr>
+						<tr>
+							<td>Database Management System</td>
+							<td>IV</td>
+							<td>2020-21</td>
+							<td>UG</td>
+						</tr>
+						<tr style="height: 20px; background: linear-gradient(to right, transparent, #6366f1, transparent);">
+							<td colspan="5" style="padding: 0; border: none;"></td>
+						</tr>
+						<tr>
+							<td>Analysis and Design of Algorithm</td>
+							<td>II</td>
+							<td>2022-23, 2021-22, 2020-21, 2018-19</td>
+							<td>UG</td>
+							<td rowspan="4">Indian Institute Of Information Technology, Pune</td>
+						</tr>
+						<tr>
+							<td>Blockchain and Its Application</td>
+							<td>VI</td>
+							<td>2022-23</td>
+							<td>UG</td>
+						</tr>
+						<tr>
+							<td>Big Data Analytics</td>
+							<td>VII</td>
+							<td>2022-23</td>
+							<td>UG</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>

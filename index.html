@@ -4,27 +4,101 @@
 		<title>Dr. Saif Nalband PhD</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			body {
+				background: linear-gradient(to bottom, #f0f4ff 0%, #ffffff 100%);
+				font-family: "Arial MT", sans-serif;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.blurb {
+				background: white;
+				padding: 50px;
+				border-radius: 12px;
+				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
+				text-align: center;
+			}
+			
+			h1 {
+				font-family: "Arial MT", sans-serif;
+				color: #4f46e5;
+				font-size: 42px;
+				margin-bottom: 20px;
+				font-weight: 700;
+			}
+			
+			p {
+				font-size: 18px;
+				line-height: 1.8;
+				color: #1e293b;
+				margin: 20px 0;
+			}
+			
+			a {
+				color: #6366f1;
+				text-decoration: none;
+				font-weight: 500;
+				border-bottom: 2px solid transparent;
+				transition: all 0.3s ease;
+			}
+			
+			a:hover {
+				color: #4f46e5;
+				border-bottom: 2px solid #4f46e5;
+			}
+			
+			.profile-image {
+				margin: 30px auto;
+				display: block;
+				width: 180px;
+				height: 180px;
+				border-radius: 50%;
+				border: 5px solid #6366f1;
+				box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+				transition: transform 0.3s ease;
+			}
+			
+			.profile-image:hover {
+				transform: scale(1.05);
+			}
+			
+			.welcome-section {
+				margin: 40px 0;
+				padding: 30px;
+				background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+				border-radius: 12px;
+				border-left: 5px solid #6366f1;
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
         		<li><a href="/Bio">Bio</a></li>
-				    <li><a href="/courses">Courses</a></li>
-				    <li><a href="/research">Research</a></li>
-            		<li><a href="/Publication">Publication</a></li>
-				    <li><a href="/about">About</a></li>
-        			<li><a href="/blog">Blog</a></li>
-				    <li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a>
+				<li><a href="/courses">Courses</a></li>
+				<li><a href="/research">Research</a></li>
+            	<li><a href="/Publication">Publication</a></li>
+				<li><a href="/about">About</a></li>
+        		<li><a href="/blog">Blog</a></li>
+				<li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a></li>
     		</ul>
 		</nav>
 		<div class="container">
     		<div class="blurb">
         		<h1>Hi there, I'm Saif Nalband!</h1>
-				<p>I am Assistant Professor at Thapar Institute of Engineering & Technology, Patiala,Panjab. <a href="/about">Read more about my life...</a></p>
+				<img src="images/saif.png" alt="Dr. Saif Nalband" class="profile-image">
+				<div class="welcome-section">
+					<p>I am Assistant Professor at Thapar Institute of Engineering & Technology, Patiala, Punjab.</p>
+					<p><a href="/about">Read more about my life...</a></p>
+				</div>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
-		<img src="images/saif.png" alt="HTML5 Icon" style="width:128px;height:128px;">
 		<footer>
     		<ul>
         		<li><a href="mailto:saif.nalband@gmail.com">email</a></li>

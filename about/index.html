@@ -1,80 +1,217 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dr. Saif Nalband PhD</title>
+		<title>Dr. Saif Nalband PhD - About</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			body {
+				background: linear-gradient(to bottom, #f0f4ff 0%, #ffffff 100%);
+				font-family: "Arial MT", sans-serif;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.blurb {
+				background: white;
+				padding: 50px;
+				border-radius: 12px;
+				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
+			}
+			
+			h1 {
+				font-family: "Arial MT", sans-serif;
+				color: #4f46e5;
+				font-size: 36px;
+				margin-bottom: 30px;
+				padding-bottom: 15px;
+				border-bottom: 3px solid #4f46e5;
+				position: relative;
+			}
+			
+			h1::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100px;
+				height: 3px;
+				background: #6366f1;
+			}
+			
+			h2 {
+				font-family: "Arial MT", sans-serif;
+				color: #4f46e5;
+				font-size: 24px;
+				margin-top: 40px;
+				margin-bottom: 20px;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 1.8;
+				color: #1e293b;
+				margin: 15px 0;
+			}
+			
+			/* Computer Skills Section */
+			.skills-intro {
+				margin: 20px 0;
+			}
+			
+			ul {
+				list-style-type: none;
+				padding-left: 0;
+			}
+			
+			ul li {
+				padding: 10px 0 10px 30px;
+				position: relative;
+				color: #1e293b;
+				line-height: 1.8;
+			}
+			
+			ul li::before {
+				content: "▶";
+				color: #6366f1;
+				position: absolute;
+				left: 0;
+				font-size: 14px;
+			}
+			
+			/* Skills Table */
+			.skills-table {
+				width: 100%;
+				max-width: 700px;
+				margin: 30px auto;
+				border-collapse: separate;
+				border-spacing: 0;
+				box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			
+			.skills-table tr {
+				background: white;
+				border-bottom: 1px solid #e0e7ff;
+				transition: all 0.3s ease;
+			}
+			
+			.skills-table tr:hover {
+				background: #f0f4ff;
+				transform: scale(1.02);
+			}
+			
+			.skills-table td {
+				padding: 18px 20px;
+				vertical-align: middle;
+			}
+			
+			.skills-table td:first-child {
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+				color: white;
+				font-weight: 600;
+				text-align: center;
+				width: 30%;
+				letter-spacing: 0.5px;
+			}
+			
+			.skills-table td:last-child {
+				color: #1e293b;
+				font-weight: 500;
+				text-align: center;
+			}
+			
+			.profile-image {
+				display: block;
+				margin: 30px auto;
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+				border: 5px solid #6366f1;
+				box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+			}
+			
+			@media (max-width: 768px) {
+				.blurb {
+					padding: 25px;
+				}
+				
+				h1 {
+					font-size: 28px;
+				}
+				
+				h2 {
+					font-size: 20px;
+				}
+				
+				.skills-table {
+					font-size: 14px;
+				}
+				
+				.skills-table td {
+					padding: 12px 10px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
-        			<li><a href="/Bio">Bio</a></li>
-				    <li><a href="/courses">Courses</a></li>
-				    <li><a href="/research">Research</a></li>
-            		<li><a href="/Publication">Publication</a></li>
-				    <li><a href="/about">About</a></li>
-        			<li><a href="/blog">Blog</a></li>
-				    <li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a>
+        		<li><a href="/Bio">Bio</a></li>
+				<li><a href="/courses">Courses</a></li>
+				<li><a href="/research">Research</a></li>
+            	<li><a href="/Publication">Publication</a></li>
+				<li><a href="/about">About</a></li>
+        		<li><a href="/blog">Blog</a></li>
+				<li><a href="/cv/SaifNalband2025.pdf" target="_blank">CV</a></li>
     		</ul>
 		</nav>
 		<div class="container">
     		<div class="blurb">
-        		<h1>Hi there, I'm Saif Nalband!</h1>
-				<p>I Compleleted my PhD from BITS-Pilani Goa Campus(2018).</a></p>
-				<h1 style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:7.0pt;font-size:15px;font-family:"Calibri",sans-serif;'><br></h1>
-<h1 style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:7.0pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>COMPUTER SKILLS</strong></h1>
-<ul style="list-style-type: disc;">
-    <li>Use&nbsp;of git&nbsp;to&nbsp;code&nbsp;development&nbsp;management&nbsp;&amp; use&nbsp;and&nbsp;creation&nbsp;of&nbsp;Docker containers.</li>
-    <li>Experienced in working on large datasets.</li>
-</ul>
-<table style="border: none;margin-left:66.75pt;border-collapse:collapse;">
-    <tbody>
-        <tr>
-            <td style="width: 99.8pt; padding: 0in; height: 12.2pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:7.35pt;margin-bottom:.0001pt;margin-left:9.0pt;line-height:11.25pt;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><strong>Language</strong></p>
-            </td>
-            <td style="width: 239.55pt; padding: 0in; height: 12.2pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:8.25pt;line-height:11.25pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>C,&nbsp;MATLAB,&nbsp;Python&nbsp;(python3),&nbsp;Java</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 99.8pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:.1in;margin-bottom:.0001pt;margin-left:9.05pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><strong>Libraries</strong></p>
-            </td>
-            <td style="width: 239.55pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:8.25pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>Numpy,&nbsp;pandas,&nbsp;sklearn,&nbsp;keras,&nbsp;statsmodel</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 99.8pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:7.35pt;margin-bottom:.0001pt;margin-left:9.05pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><strong>Machine&nbsp;Learning</strong></p>
-            </td>
-            <td style="width: 239.55pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:8.25pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>SVM,&nbsp;Random&nbsp;Forest,&nbsp;Xgboost,&nbsp;Neural&nbsp;Networks</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 99.8pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:7.25pt;margin-bottom:.0001pt;margin-left:9.05pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><strong>Office</strong></p>
-            </td>
-            <td style="width: 239.55pt; padding: 0in; height: 13.4pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:8.25pt;line-height:12.45pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>LaTeX,&nbsp;MS&nbsp;Office:&nbsp;Word,&nbsp;PowerPoint</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 99.8pt; padding: 0in; height: 12.2pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:7.35pt;margin-bottom:.0001pt;margin-left:9.05pt;line-height:11.25pt;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><strong>OS</strong></p>
-            </td>
-            <td style="width: 239.55pt; padding: 0in; height: 12.2pt; vertical-align: middle; text-align: center;">
-                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:8.25pt;line-height:11.25pt;font-size:15px;font-family:"Calibri",sans-serif;'><strong>Linux, (Shell Scripting), Windows</strong></p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+        		<h1>About Me</h1>
+				<img src="/images/saif.png" alt="Dr. Saif Nalband" class="profile-image">
+				<p>I completed my PhD from BITS-Pilani Goa Campus (2018).</p>
+				
+				<h2>Computer Skills</h2>
+				<div class="skills-intro">
+					<ul>
+						<li>Use of git to code development management & use and creation of Docker containers.</li>
+						<li>Experienced in working on large datasets.</li>
+					</ul>
+				</div>
+				
+				<table class="skills-table">
+					<tbody>
+						<tr>
+							<td>Language</td>
+							<td>C, MATLAB, Python (python3), Java</td>
+						</tr>
+						<tr>
+							<td>Libraries</td>
+							<td>Numpy, pandas, sklearn, keras, statsmodel</td>
+						</tr>
+						<tr>
+							<td>Machine Learning</td>
+							<td>SVM, Random Forest, Xgboost, Neural Networks</td>
+						</tr>
+						<tr>
+							<td>Office</td>
+							<td>LaTeX, MS Office: Word, PowerPoint</td>
+						</tr>
+						<tr>
+							<td>OS</td>
+							<td>Linux (Shell Scripting), Windows</td>
+						</tr>
+					</tbody>
+				</table>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
-		<img src="/images/saif.png" style="width:128px;height:128px;">
 		<footer>
     		<ul>
         		<li><a href="mailto:saif.nalband@gmail.com">email</a></li>

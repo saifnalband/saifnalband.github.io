@@ -6,7 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<style>
 			body {
-				background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+				background: linear-gradient(to bottom, #f0f4ff 0%, #ffffff 100%);
+				font-family: "Arial MT", sans-serif;
 			}
 			
 			.container {
@@ -17,18 +18,18 @@
 			
 			.blurb {
 				background: white;
-				padding: 40px;
+				padding: 50px;
 				border-radius: 12px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
 			}
 			
 			h2 {
 				font-family: "Arial MT", sans-serif;
-				color: #2c3e50;
+				color: #4f46e5;
 				font-size: 32px;
 				margin-bottom: 30px;
 				padding-bottom: 15px;
-				border-bottom: 3px solid #3498db;
+				border-bottom: 3px solid #4f46e5;
 				position: relative;
 			}
 			
@@ -37,9 +38,9 @@
 				position: absolute;
 				bottom: -3px;
 				left: 0;
-				width: 80px;
+				width: 100px;
 				height: 3px;
-				background: #e74c3c;
+				background: #6366f1;
 			}
 			
 			/* Education Section Styling */
@@ -52,14 +53,14 @@
 			
 			.education-table tbody tr {
 				background: #ffffff;
-				border: 1px solid #e8e8e8;
+				border: 1px solid #e0e7ff;
 				transition: all 0.3s ease;
 			}
 			
 			.education-table tbody tr:hover {
 				transform: translateX(5px);
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-				border-left: 4px solid #3498db;
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+				border-left: 4px solid #6366f1;
 			}
 			
 			.education-table td {
@@ -73,7 +74,7 @@
 				object-fit: contain;
 				border-radius: 8px;
 				padding: 10px;
-				background: #f8f9fa;
+				background: #f0f4ff;
 				transition: transform 0.3s ease;
 			}
 			
@@ -89,31 +90,31 @@
 			
 			.education-table li {
 				line-height: 1.8;
-				color: #555;
+				color: #1e293b;
 			}
 			
 			.education-table strong {
 				font-size: 18px;
-				color: #2c3e50;
+				color: #4f46e5;
 				display: block;
 				margin-bottom: 8px;
 			}
 			
 			.education-table u {
 				text-decoration: none;
-				color: #7f8c8d;
+				color: #64748b;
 				font-style: italic;
 			}
 			
 			.education-table a {
-				color: #3498db;
+				color: #6366f1;
 				text-decoration: none;
 				font-weight: 500;
 				transition: color 0.3s ease;
 			}
 			
 			.education-table a:hover {
-				color: #e74c3c;
+				color: #4f46e5;
 				text-decoration: underline;
 			}
 			
@@ -128,7 +129,7 @@
 			}
 			
 			.work-table thead {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
 				color: white;
 			}
 			
@@ -151,20 +152,20 @@
 			
 			.work-table tbody tr {
 				background: #ffffff;
-				border-bottom: 1px solid #e8e8e8;
+				border-bottom: 1px solid #e0e7ff;
 				transition: all 0.3s ease;
 			}
 			
 			.work-table tbody tr:hover {
-				background: #f8f9fa;
+				background: #f0f4ff;
 				transform: scale(1.01);
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
 			}
 			
 			.work-table td {
 				padding: 20px 15px;
 				vertical-align: top;
-				border-right: 1px solid #f0f0f0;
+				border-right: 1px solid #f0f4ff;
 			}
 			
 			.work-table td:last-child {
@@ -173,7 +174,7 @@
 			
 			.institution {
 				font-weight: bold;
-				color: #2c3e50;
+				color: #4f46e5;
 				font-size: 16px;
 				display: block;
 				margin-bottom: 5px;
@@ -181,7 +182,7 @@
 			
 			.duration {
 				display: inline-block;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
 				color: white;
 				padding: 6px 14px;
 				border-radius: 20px;
@@ -192,7 +193,7 @@
 			
 			.position {
 				font-style: italic;
-				color: #3498db;
+				color: #6366f1;
 				margin-bottom: 12px;
 				font-size: 15px;
 				font-weight: 600;
@@ -206,18 +207,18 @@
 			.work-table li {
 				margin: 8px 0;
 				line-height: 1.7;
-				color: #555;
+				color: #1e293b;
 				position: relative;
 			}
 			
 			.work-table li::marker {
-				color: #3498db;
+				color: #6366f1;
 			}
 			
 			/* Responsive Design */
 			@media (max-width: 768px) {
 				.blurb {
-					padding: 20px;
+					padding: 25px;
 				}
 				
 				h2 {
@@ -242,7 +243,7 @@
 			/* Section Divider */
 			.section-divider {
 				height: 2px;
-				background: linear-gradient(to right, transparent, #3498db, transparent);
+				background: linear-gradient(to right, transparent, #6366f1, transparent);
 				margin: 50px 0;
 			}
 		</style>
