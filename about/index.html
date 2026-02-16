@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dr. Saif Nalband PhD - About</title>
+		<title>Dr. Saif Nalband PhD - Courses</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<style>
@@ -23,17 +23,17 @@
 				box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
 			}
 			
-			h1 {
+			h2 {
 				font-family: "Arial MT", sans-serif;
 				color: #4f46e5;
-				font-size: 36px;
+				font-size: 32px;
 				margin-bottom: 30px;
 				padding-bottom: 15px;
 				border-bottom: 3px solid #4f46e5;
 				position: relative;
 			}
 			
-			h1::after {
+			h2::after {
 				content: '';
 				position: absolute;
 				bottom: -3px;
@@ -43,97 +43,71 @@
 				background: #6366f1;
 			}
 			
-			h2 {
-				font-family: "Arial MT", sans-serif;
-				color: #4f46e5;
-				font-size: 24px;
-				margin-top: 40px;
-				margin-bottom: 20px;
-			}
-			
-			p {
-				font-size: 16px;
-				line-height: 1.8;
-				color: #1e293b;
-				margin: 15px 0;
-			}
-			
-			/* Computer Skills Section */
-			.skills-intro {
-				margin: 20px 0;
-			}
-			
-			ul {
-				list-style-type: none;
-				padding-left: 0;
-			}
-			
-			ul li {
-				padding: 10px 0 10px 30px;
-				position: relative;
-				color: #1e293b;
-				line-height: 1.8;
-			}
-			
-			ul li::before {
-				content: "▶";
-				color: #6366f1;
-				position: absolute;
-				left: 0;
-				font-size: 14px;
-			}
-			
-			/* Skills Table */
-			.skills-table {
+			/* Course Table Styling */
+			.course-table {
 				width: 100%;
-				max-width: 700px;
-				margin: 30px auto;
 				border-collapse: separate;
 				border-spacing: 0;
+				margin: 30px 0;
+				font-size: 15px;
 				box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
 				border-radius: 10px;
 				overflow: hidden;
 			}
 			
-			.skills-table tr {
-				background: white;
+			.course-table thead {
+				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+				color: white;
+			}
+			
+			.course-table th {
+				padding: 18px 15px;
+				text-align: center;
+				font-weight: 600;
+				font-size: 15px;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+			
+			.course-table tbody tr {
+				background: #ffffff;
 				border-bottom: 1px solid #e0e7ff;
 				transition: all 0.3s ease;
 			}
 			
-			.skills-table tr:hover {
+			.course-table tbody tr:hover {
 				background: #f0f4ff;
-				transform: scale(1.02);
+				transform: scale(1.01);
+				box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
 			}
 			
-			.skills-table td {
-				padding: 18px 20px;
+			.course-table td {
+				padding: 18px 15px;
+				text-align: center;
+				vertical-align: middle;
+				color: #1e293b;
+				border-right: 1px solid #f0f0f0;
+			}
+			
+			.course-table td:last-child {
+				border-right: none;
+			}
+			
+			.course-table tbody tr:last-child td {
+				border-bottom: none;
+			}
+			
+			/* Institution Cell Styling */
+			.course-table td[rowspan] {
+				background: #f0f4ff;
+				font-weight: 600;
+				color: #4f46e5;
 				vertical-align: middle;
 			}
 			
-			.skills-table td:first-child {
-				background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-				color: white;
-				font-weight: 600;
-				text-align: center;
-				width: 30%;
-				letter-spacing: 0.5px;
-			}
-			
-			.skills-table td:last-child {
-				color: #1e293b;
-				font-weight: 500;
-				text-align: center;
-			}
-			
-			.profile-image {
-				display: block;
-				margin: 30px auto;
-				width: 160px;
-				height: 160px;
-				border-radius: 50%;
-				border: 5px solid #6366f1;
-				box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+			/* Empty row styling */
+			.course-table tr:has(td:empty) {
+				background: #fafafa;
 			}
 			
 			@media (max-width: 768px) {
@@ -141,20 +115,17 @@
 					padding: 25px;
 				}
 				
-				h1 {
-					font-size: 28px;
-				}
-				
 				h2 {
-					font-size: 20px;
+					font-size: 24px;
 				}
 				
-				.skills-table {
-					font-size: 14px;
+				.course-table {
+					font-size: 13px;
 				}
 				
-				.skills-table td {
-					padding: 12px 10px;
+				.course-table th,
+				.course-table td {
+					padding: 12px 8px;
 				}
 			}
 		</style>
